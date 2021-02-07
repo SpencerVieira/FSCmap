@@ -15,7 +15,7 @@
 <div id="map"></div>
 
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1Ijoic3BlbmNlcm5ucmciLCJhIjoiY2trdms1aGpjMHQycjJ4anVpNTNxaGp4NyJ9.SqWgXcJsdUtrcKuhFj_L2w';
+	mapboxgl.accessToken = 'pk.eyJ1Ijoic3BlbmNlcm5ucmciLCJhIjoiY2trdm9kNDJnMGlsMDJvcWs4MTF1cnB4ZyJ9.gh3nu8rrlfZNjonklMZQLQ';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
@@ -41,7 +41,6 @@
         }, function (err, data) {
           map.on('load', function () {
 
-    map.on('load', function () {
         // Add a new source from our GeoJSON data and
         // set the 'cluster' option to true. GL-JS will
         // add the point_count property to your source data.
