@@ -95,7 +95,7 @@
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic3BlbmNlcm5ucmciLCJhIjoiY2trdms1aGpjMHQycjJ4anVpNTNxaGp4NyJ9.SqWgXcJsdUtrcKuhFj_L2w';
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
+        style: 'mapbox://styles/mapbox/streets-v11',
         center: [-122.6744557, 45.6306954],
         zoom: 10
     });
@@ -118,17 +118,17 @@
           delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
-           cluster: true,
-           clusterMaxZoom: 14, // Max zoom to cluster points on
-           clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)}
+          cluster: true,
+          clusterMaxZoom: 14, // Max zoom to cluster points on
+          clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)}
       });
 
         map.addLayer({
             id: 'clusters',
             type: 'circle',
-            source: {
+            source: '{
                 'type': 'geojson',
-                'data': data
+                'data': data'
               },
             filter: ['has', 'point_count'],
             paint: {
